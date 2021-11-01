@@ -1,0 +1,27 @@
+name: Test Insomnia
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "environment"
+        required: true
+        default: "dev"
+
+jobs:
+  TestInsomnia:
+    if: github.event.inputs.environment == 'dev' || github.event.inputs.environment == 'stage' || github.event.inputs.environment == 'prod'
+
+    name: Test Insomnia
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository 📦
+        uses: actions/checkout@v2
+      - name: Install NodeJS
+        uses: actions/setup-node@v1
+      - name: Install inso
+        run: npm install -g insomnia-inso
+      - name: Run test suites
+        run: inso run test "player-test-cli" --env local --verbose --ci --workingDir .insomnia
+        working-directory: ./.insomnia

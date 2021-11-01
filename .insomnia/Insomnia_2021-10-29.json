@@ -1,0 +1,185 @@
+{
+  "swagger": "2.0",
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-10-29T21:21:35.423Z",
+  "__export_source": "insomnia.desktop.app:v2021.6.0",
+  "resources": [
+    {
+      "_id": "req_f4db4eebc9314d94a7088f6bfe877a60",
+      "parentId": "wrk_8e9d52e0d15a45a58fd34974751cf008",
+      "modified": 1635542388415,
+      "created": 1635542388415,
+      "url": "http://localhost:9894/app/Account/ListAccess",
+      "name": "Account/ListAccess",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"requestingAccountGuid\": \"{{ _.accountGuid }}\",\n\t\"roleFilter\": \"Buyer\",\n\t\"omitBundlesFromBoughtLicenses\": true\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_6b2e2881430e470580324a5699910f66"
+        },
+        {
+          "id": "pair_eef2dc635c284192aedf918df0d4371e",
+          "name": "Authorization",
+          "value": "Bearer {{ _.player_jwt }}",
+          "description": ""
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1631287337170,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_8e9d52e0d15a45a58fd34974751cf008",
+      "parentId": null,
+      "modified": 1635542388369,
+      "created": 1635542388369,
+      "name": "player-test-cli",
+      "description": "",
+      "scope": "design",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_459f56a0b14a4c37af1fdf2d33f15b56",
+      "parentId": "wrk_8e9d52e0d15a45a58fd34974751cf008",
+      "modified": 1635542418952,
+      "created": 1635542388411,
+      "url": "{{ _.player_url }}/Account/LicenseAccess",
+      "name": "Account/LicenseAccess",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"requestingAccountGuid\": \"{{ _.accountGuid }}\",\n\t\"guids\": [\"1686e8a8-78f4-4fac-8452-f1cd18f34ccd\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_50c725b60e384e549d415df12a56003c"
+        },
+        {
+          "id": "pair_12f3f4044961449bb3bc94ebd1db246f",
+          "name": "Authorization",
+          "value": "Bearer {{ _.player_jwt }}",
+          "description": "",
+          "disabled": false
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "",
+        "password": ""
+      },
+      "metaSortKey": -1631227652198,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_22382bc424634ed9ad1cc4dbd86f15e9",
+      "parentId": "wrk_8e9d52e0d15a45a58fd34974751cf008",
+      "modified": 1635542388374,
+      "created": 1635542388374,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1631225984654,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_06140e9bf0f5403e81101bec574549f5",
+      "parentId": "wrk_8e9d52e0d15a45a58fd34974751cf008",
+      "modified": 1635542388401,
+      "created": 1635542388401,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_a27d31cce74745f5bc75a5c0a7f085b1",
+      "parentId": "wrk_8e9d52e0d15a45a58fd34974751cf008",
+      "modified": 1635542388435,
+      "created": 1635542388406,
+      "fileName": "player-test-cli",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_1406823f00b64e53a16ca8977b9c82a2",
+      "parentId": "env_22382bc424634ed9ad1cc4dbd86f15e9",
+      "modified": 1635542388378,
+      "created": 1635542388378,
+      "name": "prod",
+      "data": {
+        "player_jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2ZGJkMTk3Ni1mZDdhLWQxZTQtZmRiNS00NWI4NjY3OTc1NmMiLCJleHAiOjMxOTY4NzQ2OTQsInNjb3BlIjoicGxheWVyLnNlc2FtZXNlZWQuY3JlYXRlLGxpY2Vuc2luZy5saWNlbnNlcy5yZWFkIn0.BB4k_qrenozUcrDw-BGSqRXLYk71N1OBRdTesrS4tVo",
+        "player_url": "https://directplayer.opensesame.com/app",
+        "accountGuid": "941757a3-7bb1-1724-a9ba-c2cb60e1a364"
+      },
+      "dataPropertyOrder": { "&": ["player_jwt", "player_url", "accountGuid"] },
+      "color": "#ff0000",
+      "isPrivate": false,
+      "metaSortKey": 1631227553416,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_47f66152062a4d80b35cd906a3ffa318",
+      "parentId": "env_22382bc424634ed9ad1cc4dbd86f15e9",
+      "modified": 1635542388389,
+      "created": 1635542388389,
+      "name": "dev",
+      "data": {
+        "player_jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2OGUyZTE5NC1lZWI5LWNkZjQtMDE4Mi03OTZlNjI2MGY3M2IiLCJleHAiOjMxOTY4NjE4MjQsInNjb3BlIjoicGxheWVyLnNlc2FtZXNlZWQuY3JlYXRlLGxpY2Vuc2luZy5saWNlbnNlcy5yZWFkIn0.-_lkeNqnb9vggaApcH9BWvMxn7aoN_mVU0cOIHkLpiU",
+        "player_url": "https://sprint1004-player.dev.opensesame.com/app",
+        "accountGuid": "515b8e24-6392-0515-b8e2-463925242422"
+      },
+      "dataPropertyOrder": { "&": ["player_jwt", "player_url", "accountGuid"] },
+      "color": "#2dbd05",
+      "isPrivate": false,
+      "metaSortKey": 1631287613516,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_4ed2215d75eb489dbd44880b5f3af43c",
+      "parentId": "env_22382bc424634ed9ad1cc4dbd86f15e9",
+      "modified": 1635542388393,
+      "created": 1635542388393,
+      "name": "local",
+      "data": {
+        "player_jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2OGUyZTE5NC1lZWI5LWNkZjQtMDE4Mi03OTZlNjI2MGY3M2IiLCJleHAiOjMxOTY4NjE4MjQsInNjb3BlIjoicGxheWVyLnNlc2FtZXNlZWQuY3JlYXRlLGxpY2Vuc2luZy5saWNlbnNlcy5yZWFkIn0.-_lkeNqnb9vggaApcH9BWvMxn7aoN_mVU0cOIHkLpiU",
+        "player_url": "http://local-player.dev.opensesame.com/app",
+        "accountGuid": "515b8e24-6392-0515-b8e2-463925242422"
+      },
+      "dataPropertyOrder": { "&": ["player_jwt", "player_url", "accountGuid"] },
+      "color": "#0461f6",
+      "isPrivate": false,
+      "metaSortKey": 1631289576665,
+      "_type": "environment"
+    }
+  ]
+}
