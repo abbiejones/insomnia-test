@@ -1,0 +1,18 @@
+_id: env_47f66152062a4d80b35cd906a3ffa318
+type: Environment
+parentId: env_22382bc424634ed9ad1cc4dbd86f15e9
+modified: 1635542388389
+created: 1635542388389
+name: dev
+data:
+  player_jwt: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2OGUyZTE5NC1lZWI5LWNkZjQtMDE4Mi03OTZlNjI2MGY3M2IiLCJleHAiOjMxOTY4NjE4MjQsInNjb3BlIjoicGxheWVyLnNlc2FtZXNlZWQuY3JlYXRlLGxpY2Vuc2luZy5saWNlbnNlcy5yZWFkIn0.-_lkeNqnb9vggaApcH9BWvMxn7aoN_mVU0cOIHkLpiU
+  player_url: https://sprint1004-player.dev.opensesame.com/app
+  accountGuid: 515b8e24-6392-0515-b8e2-463925242422
+dataPropertyOrder:
+  "&":
+    - player_jwt
+    - player_url
+    - accountGuid
+color: "#2dbd05"
+isPrivate: false
+metaSortKey: 1631287613516

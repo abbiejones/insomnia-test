@@ -23,5 +23,4 @@ jobs:
       - name: Install inso
         run: npm install -g insomnia-inso
       - name: Run test suites
-        run: inso run test "player-test-cli" --env local --verbose --ci --workingDir .insomnia
-        working-directory: ./.insomnia
+        run: inso run test "player-test-cli" --env local --verbose --ci --workingDir .

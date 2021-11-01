@@ -1,0 +1,10 @@
+_id: ut_cd73902df875456cb2c7df71069d92f3
+type: UnitTest
+parentId: uts_491510d80bfb4c38863432562da91b54
+modified: 1635786054254
+created: 1635786028836
+requestId: req_5b45893b09e1410cb422afa945f603e8
+name: Returns 200 - opensesame
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

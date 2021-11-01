@@ -1,0 +1,18 @@
+_id: env_4ed2215d75eb489dbd44880b5f3af43c
+type: Environment
+parentId: env_22382bc424634ed9ad1cc4dbd86f15e9
+modified: 1635797322431
+created: 1635542388393
+name: local
+data:
+  player_jwt: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2OGUyZTE5NC1lZWI5LWNkZjQtMDE4Mi03OTZlNjI2MGY3M2IiLCJleHAiOjMxOTY4NjE4MjQsInNjb3BlIjoicGxheWVyLnNlc2FtZXNlZWQuY3JlYXRlLGxpY2Vuc2luZy5saWNlbnNlcy5yZWFkIn0.-_lkeNqnb9vggaApcH9BWvMxn7aoN_mVU0cOIHkLpiU
+  player_url: http://local-player.dev.opensesame.com/app
+  accountGuid: 515b8e24-6392-0515-b8e2-463925242422
+dataPropertyOrder:
+  "&":
+    - player_jwt
+    - player_url
+    - accountGuid
+color: "#0461f6"
+isPrivate: false
+metaSortKey: 1631289576665

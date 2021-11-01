@@ -1,0 +1,18 @@
+_id: env_1406823f00b64e53a16ca8977b9c82a2
+type: Environment
+parentId: env_22382bc424634ed9ad1cc4dbd86f15e9
+modified: 1635542388378
+created: 1635542388378
+name: prod
+data:
+  player_jwt: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2ZGJkMTk3Ni1mZDdhLWQxZTQtZmRiNS00NWI4NjY3OTc1NmMiLCJleHAiOjMxOTY4NzQ2OTQsInNjb3BlIjoicGxheWVyLnNlc2FtZXNlZWQuY3JlYXRlLGxpY2Vuc2luZy5saWNlbnNlcy5yZWFkIn0.BB4k_qrenozUcrDw-BGSqRXLYk71N1OBRdTesrS4tVo
+  player_url: https://directplayer.opensesame.com/app
+  accountGuid: 941757a3-7bb1-1724-a9ba-c2cb60e1a364
+dataPropertyOrder:
+  "&":
+    - player_jwt
+    - player_url
+    - accountGuid
+color: "#ff0000"
+isPrivate: false
+metaSortKey: 1631227553416
